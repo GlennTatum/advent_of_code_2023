@@ -31,22 +31,6 @@ func isInt(v string) bool {
 
 func convergeInts(x, y *Integer) (int, error) {
 
-	// if x.v == "" {
-	// 	y_int, err := strconv.Atoi(y.v)
-	// 	if err != nil {
-	// 		return InvalidDecode, err
-	// 	}
-	// 	return y_int, nil
-	// }
-
-	// if y.v == "" {
-	// 	x_int, err := strconv.Atoi(x.v)
-	// 	if err != nil {
-	// 		return InvalidDecode, err
-	// 	}
-	// 	return x_int, nil
-	// }
-
 	x_int, err := strconv.Atoi(x.v)
 	if err != nil {
 		return InvalidDecode, err
@@ -69,10 +53,6 @@ func DecodeCalibrationValue(v string) (int, error) {
 	stream := strings.Split(v, "")
 
 	fmt.Println("String:", v, "String length:", len(v))
-
-	// Divide the array into 2 halves
-	// hops := int(math.Ceil(float64(len(stream)) / 2.0))
-	// fmt.Println("Hops: ", hops)
 
 	x := NewInteger()
 	y := NewInteger()
@@ -127,13 +107,6 @@ func run() error {
 	}
 
 	fmt.Println("Final Sum:", sum, "Current Line:", current)
-
-	// TODO DecodeCalibrationValue breaks if there is only 1 integer present within the string
-	// z, err := DecodeCalibrationValue("85oneighttx")
-	// if err != nil {
-	// 	return err
-	// }
-	// fmt.Println(z)
 
 	return nil
 }
