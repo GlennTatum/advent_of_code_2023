@@ -68,7 +68,6 @@ func DecodeCalibrationValue(v string) (int, error) {
 		}
 		if !y.discovered {
 			y_index := (len(stream) - 1) - i
-			fmt.Println(stream[y_index])
 			ok := isInt(stream[y_index])
 			if ok {
 				y.v = stream[y_index]
